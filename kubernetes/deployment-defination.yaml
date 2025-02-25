@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  labels:
+    type: backend
+    app: simp
+spec:
+  template:
+    metadata:
+      name: nodejs-pods
+      labels:
+        app: simp
+        type: backend
+    spec:
+      containers:
+        - name: nodejs-container
+          image: yaashwaanth17/gys-nodejs-app
+  replicas: 3
+  selector:
+    matchLabels:
+      type: backend
