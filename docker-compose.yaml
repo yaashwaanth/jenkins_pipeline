@@ -2,6 +2,6 @@ version: "3"
 services:
    node:
       image: "yaashwaanth17/my-nodejs-app:latest"
-        context: .
       ports:
         - "8000:8000"
+# done
